@@ -1,11 +1,14 @@
-import { Component } from 'react'
+import React from 'react'
 
-export default class SearchBar extends Component {
-  constructor(props){
-    super(props);
-    this.state={ password: ''}
-  }
-    // onInputClick(event){
+export default class SearchBar extends React.Component {
+ 
+  // constructor(props){
+  //   super(props);
+  // this.state={ text: ''}
+  // }
+
+  state = { text: '' }
+    // onInputClick=(event)=>{
     //         console.log(event.target.value )
     //     }
     //     onInputChange(event){
@@ -14,54 +17,59 @@ export default class SearchBar extends Component {
     //         console.log(event.target.value )
     // }
 
-    onFormSubmit(event){
+    // first way to do it
+    onFormSubmit = (event) =>{
       event.preventDefault();
+      this.props.onSubmit(this.state.text)
     }
+
+    // onFormSubmit(event){
+    //   event.preventDefault();
+    //  this.props.onSubmit(this.state.text)
+    // }
   render() {
     return (
         <div>
-          {/* ///password form */}
-          {/* <label htmlFor="">Enter Password</label>
+          {/* ///text form */}
+          {/* <label htmlFor="">Enter text</label>
         <form  className='ui form'>
         <div className="ui  segment">
           <div className="ui  right icon input">
           
-            <input type="password"
+            <input type="text"
              placeholder="Search..." 
-             value={this.state.password}
+             value={this.state.text}
             //  onClick={this.onInputClick} 
-             onChange={e => this.setState({password: e.target.value})}
+             onChange={e => this.setState({text: e.target.value})}
              />
             
             <i className="search icon"></i>
           </div>
         </div>
         </form >
-          <label htmlFor="">{this.state.password.length < 4 ? 'Password must be at least 4 characters': ''}</label> */}
+          <label htmlFor="">{this.state.text.length < 4 ? 'text must be at least 4 characters': ''}</label> */}
           {/* ///SearchBar */}
           
 
 
 
-<label htmlFor="">Enter Password</label>
-<label htmlFor="">added</label>
-<label htmlFor="">added</label>
+<label htmlFor="">Enter text</label>
         <form  onSubmit={this.onFormSubmit} className='ui form'>
         <div className="ui  segment">
           <div className="ui  right icon input">
           
-            <input type="password"
+            <input type="text"
              placeholder="Search..." 
-             value={this.state.password}
+             value={this.state.text}
             //  onClick={this.onInputClick} 
-             onChange={e => this.setState({password: e.target.value})}
+             onChange={e => this.setState({text: e.target.value})}
              />
             
             <i className="search icon"></i>
-          </div>
+          </div> 
         </div>
         </form >
-          <label htmlFor="">{this.state.password.length < 4 ? 'Password =============fds  must be at least 4 characters': ''}</label>
+          {/* <label htmlFor="">{this.state.text.length < 4 ? 'text must be at least 4 characters': ''}</label> */}
       </div>
     )
   }
