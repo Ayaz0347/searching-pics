@@ -44,6 +44,7 @@ export default class SearchBar extends Component {
 
 
 <label htmlFor="">Enter Password</label>
+<label htmlFor="">added</label>
         <form  onSubmit={this.onFormSubmit} className='ui form'>
         <div className="ui  segment">
           <div className="ui  right icon input">
@@ -59,7 +60,7 @@ export default class SearchBar extends Component {
           </div>
         </div>
         </form >
-          <label htmlFor="">{this.state.password.length < 4 ? 'Password must be at least 4 characters': ''}</label>
+          <label htmlFor="">{this.state.password.length < 4 ? 'Password =============fds  must be at least 4 characters': ''}</label>
       </div>
     )
   }
