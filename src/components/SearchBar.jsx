@@ -45,6 +45,7 @@ export default class SearchBar extends Component {
 
 <label htmlFor="">Enter Password</label>
 <label htmlFor="">added</label>
+<label htmlFor="">added</label>
         <form  onSubmit={this.onFormSubmit} className='ui form'>
         <div className="ui  segment">
           <div className="ui  right icon input">
