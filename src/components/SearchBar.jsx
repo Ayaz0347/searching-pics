@@ -59,7 +59,7 @@ export default class SearchBar extends React.Component {
           <div className="ui  right icon input">
           
             <input type="text"
-             placeholder="Search..." 
+             placeholder="Search..."  
              value={this.state.text}
             //  onClick={this.onInputClick} 
              onChange={e => this.setState({text: e.target.value})}
